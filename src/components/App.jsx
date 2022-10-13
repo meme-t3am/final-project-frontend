@@ -8,7 +8,8 @@ export default function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Auth />} >
-          <Route index element={<AuthForm/>}/>
+          <Route index element={<AuthForm mode="signin"/>}/>
+          <Route path="signup" element={<AuthForm mode="signup"/>}/>
         </Route>
       </Routes>
     </Router>
