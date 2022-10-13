@@ -21,4 +21,6 @@ async function doFetch(url, method, body) {
   return { data, error };
 }
 
+export const get = (url) => doFetch(url, 'GET');
+
 export const post = (url, body) => doFetch(url, 'POST', body);
