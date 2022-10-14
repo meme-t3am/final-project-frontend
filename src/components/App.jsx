@@ -8,18 +8,14 @@ import AuthForm from './CustomForms/AuthForm';
 export default function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Auth />} >
-          <Route index element={<AuthForm mode="signin"/>}/>
-          <Route path="signup" element={<AuthForm mode="signup"/>}/>
-        </Route>
-      </Routes>
       <UserProvider>
         <Routes>
-          <Route path="/" element={<Auth />}>
-            <Route index element={<AuthForm />} />
+          <Route path="/" element={<Auth />} >
+            <Route index element={<AuthForm mode="signin"/>}/>
+            <Route path="signup" element={<AuthForm mode="signup"/>}/>
           </Route>
-
+        </Routes>
+        <Routes>
           <Route element={<ProtectedRoute />}>
             <Route element={<Test />} />
           </Route>
