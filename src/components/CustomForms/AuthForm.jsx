@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/prop-types */
 // import components and pass properties needed
 // build actual auth form here

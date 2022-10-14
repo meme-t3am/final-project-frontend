@@ -6,11 +6,10 @@ function getValue(target) {
 
 export function handleForm(formData) {
   const [data, setData] = useState(formData ?? {});
-
   useEffect(() => {
     setData(formData ?? {});
   }, [formData]);
-  
+
   const handleChange = ({ target }) => {
     setData((data) => ({
       ...data,
