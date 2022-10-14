@@ -17,6 +17,7 @@ async function doFetch(url, method, body) {
   const res = await fetch(url, options);
   const resBody = await res.json();
   const error = res.ok ? null : resBody;
+  console.log('error', error);
   const data = res.ok ? resBody : null;
   return { data, error };
 }

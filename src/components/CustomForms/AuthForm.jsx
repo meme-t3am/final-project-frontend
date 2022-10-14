@@ -15,7 +15,7 @@ export default function AuthForm({ mode = 'signin' }) {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await type.action(data);
-    // window.location.replace('/');
+    window.location.replace('/meme');
   };
 
   const signUp = async (credentials) => {
@@ -64,7 +64,6 @@ export default function AuthForm({ mode = 'signin' }) {
         label="Email"
         name="email"
         type="email"
-        placeholder="MichaelScott@dundermifflin.com"
         onChange={(e) => handleChange(e)}
       >
       </InputControl>
