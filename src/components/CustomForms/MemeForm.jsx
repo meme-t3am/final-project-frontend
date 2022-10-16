@@ -1,11 +1,13 @@
 import { FormButton, InputControl } from './FormControl';
+import styles from './MemeForm.css';
+import '../App.css';
 
 export default function MemeForm() {
   return (
-    <div>
-      <div>
+    <div className={styles.MemeForm}>
+      <h1>AllegorI</h1>
+      <div className={styles.InputForm}>
         <form>
-          <h1>Make-a-meme</h1>
           <InputControl
             label="Upload Image URL"
             type="text"
@@ -14,6 +16,8 @@ export default function MemeForm() {
 
           <FormButton>Upload</FormButton>
         </form>
+      </div>
+      <div className={styles.Output}>
       </div>
       <div>
         

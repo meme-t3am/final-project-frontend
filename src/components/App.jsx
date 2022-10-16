@@ -4,6 +4,7 @@ import UserProvider from './Context/UserContext';
 import Auth from './CustomForms/Auth';
 import AuthForm from './CustomForms/AuthForm';
 import MemeForm from './CustomForms/MemeForm';
+import './App.css';
 
 export default function App() {
   return (

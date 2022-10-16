@@ -1,0 +1,17 @@
+.InputForm {
+    width: 20em;
+    height: 20em;
+    background-color: mistyrose;
+    margin-bottom: 2em;
+    border-radius: 1em; 
+    box-shadow: 1em .5em 1em rgb(181, 134, 134);
+}
+
+.Output {
+    width: 20em;
+    height: 20em;
+    background-color: peru;
+    border-radius: 1em;
+    box-shadow: 1em .5em 1em rgb(141, 75, 75);
+
+}
