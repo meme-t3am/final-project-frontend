@@ -1,17 +1,36 @@
-.InputForm {
-    width: 20em;
-    height: 20em;
-    background-color: mistyrose;
-    margin-bottom: 2em;
-    border-radius: 1em; 
-    box-shadow: 1em .5em 1em rgb(181, 134, 134);
+.Input {
+  width: 20em;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
+  border-radius: 1em;
+  font-family: 'Montserrat';
+  box-shadow: 1em 0.5em 1em var(--color1);
+  background-color: var(--color3);
+}
+
+.Input form {
+  width: 15em;
+  height: 5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.Input label {
+  font-size: larger;
+  color: var(--color1);
 }
 
 .Output {
-    width: 20em;
-    height: 20em;
-    background-color: peru;
-    border-radius: 1em;
-    box-shadow: 1em .5em 1em rgb(141, 75, 75);
-
+  width: 20em;
+  height: 20em;
+  background-color: var(--color2);
+  border-radius: 1em;
+  box-shadow: 1em 0.5em 1em var(--color1);
 }
