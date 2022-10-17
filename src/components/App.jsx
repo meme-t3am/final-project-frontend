@@ -16,13 +16,12 @@ export default function App() {
             <Route index element={<AuthForm mode="signin" />} />
             <Route path="signup" element={<AuthForm mode="signup" />} />
           </Route>
-        </Routes>
-        <Routes>
-          <MemeProvider>
-            <Route element={<ProtectedRoute />}>
+
+          <Route element={<ProtectedRoute />}>
+            <Route element={<MemeProvider />}>
               <Route path="meme" element={<MemeForm />} />
             </Route>
-          </MemeProvider>
+          </Route>
         </Routes>
       </UserProvider>
     </Router>

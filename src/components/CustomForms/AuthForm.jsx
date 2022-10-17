@@ -9,7 +9,6 @@ import { FormButton, InputControl } from './FormControl';
 import { handleForm } from './HandleForm';
 
 export default function AuthForm({ mode = 'signin' }) {
-
   const [data, handleChange] = handleForm();
 
   const handleSubmit = async (e) => {
@@ -31,18 +30,18 @@ export default function AuthForm({ mode = 'signin' }) {
     button: 'Sign Up',
     switch: {
       prompt: 'Already have an account?',
-      link: '../'
-    }, 
-    action: signUp
+      link: '../',
+    },
+    action: signUp,
   };
   const signin = {
     prompt: 'Sign In',
     button: 'Sign In',
     switch: {
       prompt: 'Need to create an account?',
-      link: 'signup'
-    }, 
-    action: signIn
+      link: 'signup',
+    },
+    action: signIn,
   };
   const modes = { signup, signin };
 
@@ -57,24 +56,21 @@ export default function AuthForm({ mode = 'signin' }) {
         name="userName"
         type="text"
         onChange={(e) => handleChange(e)}
-      >
-      </InputControl>
+      ></InputControl>
 
       <InputControl
         label="Email"
         name="email"
         type="email"
         onChange={(e) => handleChange(e)}
-      >
-      </InputControl>
+      ></InputControl>
 
       <InputControl
         label="Password"
         name="password"
         type="password"
         onChange={(e) => handleChange(e)}
-      >
-      </InputControl>
+      ></InputControl>
 
       <FormButton>Submit</FormButton>
       <nav>

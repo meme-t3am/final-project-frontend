@@ -1,9 +1,9 @@
 import { createContext, useEffect, useState } from 'react';
 import { getMemes } from '../Services/meme';
 
-const MemeContext = createContext();
+export const MemeContext = createContext();
 
-export default function MemeProvider() {
+export default function MemeProvider({ children }) {
   const [meme, setMeme] = useState('');
 
   useEffect(() => {
@@ -15,5 +15,9 @@ export default function MemeProvider() {
     setMeme,
   };
 
-  return <MemeContext.Provider value={stateAndSetters}></MemeContext.Provider>;
+  return (
+    <MemeContext.Provider value={stateAndSetters}>
+      {children}
+    </MemeContext.Provider>
+  );
 }
