@@ -1,4 +1,5 @@
 import { createContext, useEffect, useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import { getMemes } from '../Services/meme';
 
 export const MemeContext = createContext();
@@ -17,7 +18,7 @@ export default function MemeProvider({ children }) {
 
   return (
     <MemeContext.Provider value={stateAndSetters}>
-      {children}
+      {children} || <Outlet />
     </MemeContext.Provider>
   );
 }
