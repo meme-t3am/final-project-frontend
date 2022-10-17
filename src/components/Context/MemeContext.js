@@ -6,6 +6,7 @@ export const MemeContext = createContext();
 
 export default function MemeProvider({ children }) {
   const [meme, setMeme] = useState('');
+  const [url, setUrl] = useState(null);
 
   useEffect(() => {
     getMemes();
@@ -13,7 +14,9 @@ export default function MemeProvider({ children }) {
 
   const stateAndSetters = {
     meme,
+    url,
     setMeme,
+    setUrl,
   };
 
   return (
