@@ -30,6 +30,10 @@
 .Output {
   width: 20em;
   height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: var(--color2);
   border-radius: 1em;
   box-shadow: 1em 0.5em 1em var(--color1);

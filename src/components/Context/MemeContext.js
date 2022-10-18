@@ -1,16 +1,13 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import { getMemes } from '../Services/meme';
 
 export const MemeContext = createContext();
 
 export default function MemeProvider({ children }) {
   const [meme, setMeme] = useState('');
-  const [url, setUrl] = useState(null);
+  const [url, setUrl] = useState('');
 
-  useEffect(() => {
-    getMemes();
-  }, []);
+  // larger getAllMemes(potentially)
 
   const stateAndSetters = {
     meme,

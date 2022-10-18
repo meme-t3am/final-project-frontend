@@ -1,11 +1,16 @@
+import { useContext } from 'react';
+import { MemeContext } from '../../Context/MemeContext';
 import styles from '../MemeForm.css';
 
+// consider re-naming when approaching stretch goals
 export default function OutputForm() {
+  const { meme } = useContext(MemeContext);
+
   return (
     <div className={styles.Output}>
-      <img 
-        src="https://i.kym-cdn.com/photos/images/newsfeed/000/911/486/6bb.jpg" 
+      <img src={meme.url}
       />
+      {meme.tags?.map((tag) => <p key={tag}>{tag.tag}</p>)}
     </div>
   );
 }
