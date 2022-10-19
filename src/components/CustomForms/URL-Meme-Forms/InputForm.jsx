@@ -1,20 +1,12 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { FormButton, InputControl } from '../FormControl';
 import styles from '../MemeForm.css';
 import { MemeContext } from '../../Context/MemeContext';
 import { memeResponseArrayOfArrays } from '../../Services/meme';
 
-// FLOW
-// input URL
-// onChange, setState(e.target.value)
-// onSubmit: handleSubmit(e.preventDefault(),
-//  await fetch-function postURL() setState()) --- /imaggas/userPic
-// receive (useEffect) Meme-url from fetch-function insertMeme()
-// and render to page
-
 export default function InputForm() {
-  //consider moving url and setUrl into a useState - local to this form
-  const { url, setUrl, setMeme } = useContext(MemeContext);
+  const { setMeme } = useContext(MemeContext);
+  const [url, setUrl] = useState('');
 
   const handleChange = (e) => {
     setUrl(e.target.value);
@@ -23,8 +15,10 @@ export default function InputForm() {
   const handleUrlSubmit = async (e) => {
     e.preventDefault();
     const memeRes = await memeResponseArrayOfArrays(url);
+    // .sort() method sorts through array of memes and orders them by
+    // highest to lowest confidence
+    // a[0]/b[0] targets the first index of the array (confidence) 
     const sortedMemes = memeRes.sort((a, b) => b[0] - a[0]);
-    //[0] gives us the sorted array we expect and helps with decimals
     console.log('sorted Memes', sortedMemes);
     setMeme(sortedMemes);
   };

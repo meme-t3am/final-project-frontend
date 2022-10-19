@@ -5,15 +5,10 @@ export const MemeContext = createContext();
 
 export default function MemeProvider({ children }) {
   const [meme, setMeme] = useState([]);
-  const [url, setUrl] = useState('');
-
-  // larger getAllMemes(potentially)
 
   const stateAndSetters = {
     meme,
-    url,
     setMeme,
-    setUrl,
   };
 
   return (
