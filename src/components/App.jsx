@@ -6,23 +6,26 @@ import AuthForm from './CustomForms/AuthForm';
 import MemeForm from './CustomForms/MemeForm';
 import './App.css';
 import MemeProvider from './Context/MemeContext';
+import Layout from './CustomForms/Header/Layout';
 
 export default function App() {
   return (
     <Router>
       <UserProvider>
-        <Routes>
-          <Route path="/" element={<Auth />}>
-            <Route index element={<AuthForm mode="signin" />} />
-            <Route path="signup" element={<AuthForm mode="signup" />} />
-          </Route>
-
-          <Route element={<ProtectedRoute />}>
-            <Route element={<MemeProvider />}>
-              <Route path="meme" element={<MemeForm />} />
+        <Layout>
+          <Routes>
+            <Route path="/" element={<Auth />}>
+              <Route index element={<AuthForm mode="signin" />} />
+              <Route path="signup" element={<AuthForm mode="signup" />} />
             </Route>
-          </Route>
-        </Routes>
+
+            <Route element={<ProtectedRoute />}>
+              <Route element={<MemeProvider />}>
+                <Route path="meme" element={<MemeForm />} />
+              </Route>
+            </Route>
+          </Routes>
+        </Layout>
       </UserProvider>
     </Router>
   );
