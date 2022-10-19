@@ -18,7 +18,7 @@ export default function MemeProvider({ children }) {
 
   return (
     <MemeContext.Provider value={stateAndSetters}>
-      {children} || <Outlet />
+      {children} <Outlet />
     </MemeContext.Provider>
   );
 }
