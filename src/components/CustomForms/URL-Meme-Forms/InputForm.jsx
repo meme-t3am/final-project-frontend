@@ -23,7 +23,7 @@ export default function InputForm() {
   const handleUrlSubmit = async (e) => {
     e.preventDefault();
     const memeRes = await memeResponseArrayOfArrays(url);
-    const sortedMemes = memeRes.sort((a, b) => a[0] - b[0]);
+    const sortedMemes = memeRes.sort((a, b) => b[0] - a[0]);
     //[0] gives us the sorted array we expect and helps with decimals
     console.log('sorted Memes', sortedMemes);
     setMeme(sortedMemes);

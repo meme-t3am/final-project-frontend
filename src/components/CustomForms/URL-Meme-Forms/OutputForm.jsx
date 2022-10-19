@@ -8,11 +8,13 @@ export default function OutputForm() {
 
   return (
     <div className={styles.Output}>
-      
-      <img src={meme[1]}
-      />
-      {/* Do we want to display this to the user? */}
-      confidence: {meme[0]}
+      {meme.map((memo) => (
+        <div key={memo[0]}>
+          <img src={memo[1]} />
+          {/* Do we want to display this to the user? */}
+          confidence: {memo[0]}
+        </div>
+      ))}
     </div>
   );
 }

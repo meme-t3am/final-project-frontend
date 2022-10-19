@@ -22,6 +22,5 @@ export async function verifyUser() {
 
 export async function signOutUser() {
   const res = await del(`${BASE_URL}/sessions`);
-  console.log('res', res);
   return res;
 }

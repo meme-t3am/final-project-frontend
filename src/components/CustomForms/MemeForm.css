@@ -38,3 +38,8 @@
   border-radius: 1em;
   box-shadow: 1em 0.5em 1em var(--color1);
 }
+
+.Output img {
+  width: 15em;
+  height: auto;
+}
