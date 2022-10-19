@@ -8,9 +8,11 @@ export default function OutputForm() {
 
   return (
     <div className={styles.Output}>
-      <img src={meme.url}
+      
+      <img src={meme[1]}
       />
-      {meme.tags?.map((tag) => <p key={tag}>{tag.tag}</p>)}
+      {/* Do we want to display this to the user? */}
+      confidence: {meme[0]}
     </div>
   );
 }

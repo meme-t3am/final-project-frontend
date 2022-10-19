@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 export const MemeContext = createContext();
 
 export default function MemeProvider({ children }) {
-  const [meme, setMeme] = useState('');
+  const [meme, setMeme] = useState([]);
   const [url, setUrl] = useState('');
 
   // larger getAllMemes(potentially)
