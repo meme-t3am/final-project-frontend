@@ -25,3 +25,5 @@ async function doFetch(url, method, body) {
 export const get = (url) => doFetch(url, 'GET');
 
 export const post = (url, body) => doFetch(url, 'POST', body);
+
+export const del = (url) => doFetch(url, 'DELETE');

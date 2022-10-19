@@ -2,19 +2,21 @@
 /* eslint-disable react/prop-types */
 // import components and pass properties needed
 // build actual auth form here
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { signUpUser, signInUser } from '../Services/auth';
 import styles from './AuthForm.css';
 import { FormButton, InputControl } from './FormControl';
 import { handleForm } from './HandleForm';
 
 export default function AuthForm({ mode = 'signin' }) {
+
   const [data, handleChange] = handleForm();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
+    navigate('/meme');
     e.preventDefault();
     await type.action(data);
-    window.location.replace('/meme');
   };
 
   const signUp = async (credentials) => {
