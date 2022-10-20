@@ -80,3 +80,20 @@
     transform: scale(1, 1);
   }
 }
+
+.MemeCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: red;
+}
+
+.MemeCard img {
+  width: auto;
+  height: 15em;
+  margin: .5em;
+}
+
+.Favorites {
+  display: flex;
+}

@@ -7,6 +7,7 @@ import { useUser } from '../Context/UserContext';
 import { signOutUser } from '../Services/auth';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import OtherMemes from './URL-Meme-Forms/OtherMemes';
 
 export default function MemeForm() {
   const { setUser } = useUser();
@@ -27,6 +28,7 @@ export default function MemeForm() {
   };
 
   return (
+
     <div className={styles.container}>
       {loading ? (
         <div className={styles.loaderContainer}>
@@ -40,6 +42,13 @@ export default function MemeForm() {
           <OutputForm />
         </div>
       )}
+
+    <div className={styles.MemeForm}>
+      <h1>Allegori</h1>
+      <button onClick={logout}>Logout</button>
+      <InputForm/>
+      <OutputForm/>
+      <OtherMemes />
     </div>
   );
 }
