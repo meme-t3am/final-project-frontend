@@ -9,14 +9,13 @@ import { FormButton, InputControl } from './FormControl';
 import { handleForm } from './HandleForm';
 
 export default function AuthForm({ mode = 'signin' }) {
-
   const [data, handleChange] = handleForm();
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    navigate('/meme');
     e.preventDefault();
     await type.action(data);
+    navigate('/meme');
   };
 
   const signUp = async (credentials) => {
