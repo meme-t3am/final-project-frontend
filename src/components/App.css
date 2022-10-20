@@ -3,6 +3,8 @@ html,
 #root {
   height: 100vh;
   width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
   background-image: linear-gradient(
     150deg,
     var(--color1),

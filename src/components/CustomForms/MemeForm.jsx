@@ -8,6 +8,7 @@ import { signOutUser } from '../Services/auth';
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import OtherMemes from './URL-Meme-Forms/OtherMemes';
+import loaderImage from '/public/images/loader.png';
 
 export default function MemeForm() {
   const { setUser } = useUser();
@@ -28,11 +29,10 @@ export default function MemeForm() {
   };
 
   return (
-
     <div className={styles.container}>
       {loading ? (
         <div className={styles.loaderContainer}>
-          <div className={styles.spinner}></div>
+          <img src={loaderImage} className={styles.spinner} />
         </div>
       ) : (
         <div className={styles.MemeForm}>
@@ -40,15 +40,9 @@ export default function MemeForm() {
           <button onClick={logout}>Logout</button>
           <InputForm />
           <OutputForm />
+          <OtherMemes />
         </div>
       )}
-
-    <div className={styles.MemeForm}>
-      <h1>Allegori</h1>
-      <button onClick={logout}>Logout</button>
-      <InputForm/>
-      <OutputForm/>
-      <OtherMemes />
     </div>
   );
 }
