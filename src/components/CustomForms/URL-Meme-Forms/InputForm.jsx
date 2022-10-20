@@ -5,7 +5,7 @@ import { memeResponseArrayOfArrays } from '../../Services/meme';
 import { useContext, useState } from 'react';
 
 export default function InputForm() {
-  const { setMeme, setSingleMeme } = useContext(MemeContext);
+  const { setMeme, setSingleMeme, setDisplayUrl } = useContext(MemeContext);
   const [url, setUrl] = useState('');
 
   const handleChange = (e) => {
@@ -20,6 +20,7 @@ export default function InputForm() {
     setSingleMeme(topMeme);
     const memes = [sortedMemes[1], sortedMemes[2], sortedMemes[3]];
     setMeme(memes);
+    setDisplayUrl(url);
   };
 
   return (

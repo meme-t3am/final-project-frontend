@@ -30,6 +30,6 @@ export default function UserProvider({ children }) {
 }
 
 export function useUser() {
-  const { user, setUser } = useContext(UserContext);
-  return [user, setUser];
+  const { user, setUser, url, setUrl } = useContext(UserContext);
+  return [user, setUser, url, setUrl];
 }
