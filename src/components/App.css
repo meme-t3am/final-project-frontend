@@ -16,6 +16,7 @@ html,
   --color3: rgb(255, 104, 104);
 }
 
+/* < immediate child that matches the selector  */
 body > div {
   width: 100%;
   height: 100%;
