@@ -1,8 +1,8 @@
-import { useContext, useState } from 'react';
 import { FormButton, InputControl } from '../FormControl';
 import styles from '../MemeForm.css';
 import { MemeContext } from '../../Context/MemeContext';
 import { memeResponseArrayOfArrays } from '../../Services/meme';
+import { useContext, useState } from 'react';
 
 export default function InputForm() {
   const { setMeme } = useContext(MemeContext);
@@ -11,7 +11,7 @@ export default function InputForm() {
   const handleChange = (e) => {
     setUrl(e.target.value);
   };
-
+  
   const handleUrlSubmit = async (e) => {
     e.preventDefault();
     const memeRes = await memeResponseArrayOfArrays(url);
@@ -19,8 +19,8 @@ export default function InputForm() {
     // highest to lowest confidence
     // a[0]/b[0] targets the first index of the array (confidence) 
     const sortedMemes = memeRes.sort((a, b) => b[0] - a[0]);
-    console.log('sorted Memes', sortedMemes);
-    setMeme(sortedMemes);
+    const memes = [sortedMemes[0], sortedMemes[1], sortedMemes[2]];
+    setMeme(memes);
   };
 
   return (
