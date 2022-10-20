@@ -28,7 +28,6 @@ export default function MemeForm() {
   };
 
   return (
-
     <div className={styles.container}>
       {loading ? (
         <div className={styles.loaderContainer}>
@@ -39,16 +38,12 @@ export default function MemeForm() {
           <h1>Allegori</h1>
           <button onClick={logout}>Logout</button>
           <InputForm />
-          <OutputForm />
+          <div className={styles.InputAndOutput}>
+            <OutputForm />
+          </div>
+          <OtherMemes />
         </div>
       )}
-
-    <div className={styles.MemeForm}>
-      <h1>Allegori</h1>
-      <button onClick={logout}>Logout</button>
-      <InputForm/>
-      <OutputForm/>
-      <OtherMemes />
-    </div>
+    </div>  
   );
 }

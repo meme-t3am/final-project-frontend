@@ -9,7 +9,7 @@ export default function OutputForm() {
       <section className={styles.Output}>
         <TopMemeCard/>
       </section>
-      <section>
+      <section className={styles.Output}>
         <UserImageCard/>
       </section>
     </>
