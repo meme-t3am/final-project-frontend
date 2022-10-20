@@ -1,6 +1,17 @@
+.container {
+  height: 100vh;
+  width: 100%;
+  /* background-image: url('/public/images/loader.png'); */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
 .Input {
-  width: 20em;
-  height: 20em;
+  width: 25em;
+  height: 5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,8 +24,8 @@
 }
 
 .Input form {
-  width: 15em;
-  height: 5em;
+  width: 60%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,8 +39,8 @@
 }
 
 .Output {
-  width: 20em;
-  height: 20em;
+  width: 25em;
+  height: 25em;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,8 +51,34 @@
 }
 
 .Output img {
-  width: 15em;
+  width: 5em;
   height: auto;
+}
+
+.loaderContainer {
+  height: 100vh;
+  width: 50%;
+  background-image: url('/public/images/loader.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background-repeat: no-repeat;
+  /* background: var(--color3); */
+  z-index: 1;
+  animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }
 
 .MemeCard {
