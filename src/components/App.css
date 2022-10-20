@@ -1,22 +1,36 @@
 body,
 html,
 #root {
+  height: 100vh;
+  width: 100%;
   background-image: linear-gradient(
     150deg,
-    var(--color2),
     var(--color1),
-    var(--color2)
+    var(--color2),
+    var(--color1)
   );
   background-repeat: no-repeat;
   background-size: stretch;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
   --color1: rgb(209, 240, 229);
   --color2: rgb(21, 63, 96);
   --color3: rgb(255, 104, 104);
+}
+
+/* < immediate child that matches the selector  */
+body > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
