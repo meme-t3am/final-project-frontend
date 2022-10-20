@@ -5,7 +5,7 @@ import { memeResponseArrayOfArrays } from '../../Services/meme';
 import { useContext, useState } from 'react';
 
 export default function InputForm() {
-  const { setMeme } = useContext(MemeContext);
+  const { setMeme, setSingleMeme } = useContext(MemeContext);
   const [url, setUrl] = useState('');
 
   const handleChange = (e) => {
@@ -15,11 +15,10 @@ export default function InputForm() {
   const handleUrlSubmit = async (e) => {
     e.preventDefault();
     const memeRes = await memeResponseArrayOfArrays(url);
-    // .sort() method sorts through array of memes and orders them by
-    // highest to lowest confidence
-    // a[0]/b[0] targets the first index of the array (confidence) 
     const sortedMemes = memeRes.sort((a, b) => b[0] - a[0]);
-    const memes = [sortedMemes[0], sortedMemes[1], sortedMemes[2]];
+    const topMeme = sortedMemes[0];
+    setSingleMeme(topMeme);
+    const memes = [sortedMemes[1], sortedMemes[2], sortedMemes[3]];
     setMeme(memes);
   };
 

@@ -6,6 +6,7 @@ import InputForm from './URL-Meme-Forms/InputForm.jsx';
 import { useUser } from '../Context/UserContext';
 import { signOutUser } from '../Services/auth';
 import { useNavigate } from 'react-router-dom';
+import OtherMemes from './URL-Meme-Forms/OtherMemes';
 
 export default function MemeForm() {
 
@@ -24,6 +25,7 @@ export default function MemeForm() {
       <button onClick={logout}>Logout</button>
       <InputForm/>
       <OutputForm/>
+      <OtherMemes />
     </div>
   );
 }

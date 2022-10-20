@@ -5,10 +5,13 @@ export const MemeContext = createContext();
 
 export default function MemeProvider({ children }) {
   const [meme, setMeme] = useState([]);
+  const [singleMeme, setSingleMeme] = useState([]);
 
   const stateAndSetters = {
     meme,
     setMeme,
+    singleMeme,
+    setSingleMeme,
   };
 
   return (
