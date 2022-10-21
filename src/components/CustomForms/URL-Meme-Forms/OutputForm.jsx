@@ -3,15 +3,14 @@ import TopMemeCard from './TopMemeCard';
 import UserImageCard from './UserImageCard';
 
 export default function OutputForm() {
-
   return (
-    <>
+    <div className={styles.OutputContainer}>
       <section className={styles.Output}>
-        <UserImageCard/>
+        <UserImageCard />
       </section>
       <section className={styles.Output}>
-        <TopMemeCard/>
+        <TopMemeCard />
       </section>
-    </>
+    </div>
   );
 }

@@ -4,6 +4,7 @@
 // build actual auth form here
 import { Link, useNavigate } from 'react-router-dom';
 import { signUpUser, signInUser } from '../Services/auth';
+import styles from '/src/components/App.css';
 import { FormButton, InputControl } from './FormControl';
 import { handleForm } from './HandleForm';
 
@@ -48,7 +49,7 @@ export default function AuthForm({ mode = 'signin' }) {
   const type = modes[mode];
 
   return (
-    <form onSubmit={(e) => handleSubmit(e)}>
+    <form className={styles.AuthForm} onSubmit={(e) => handleSubmit(e)}>
       <h1>{type.prompt}</h1>
 
       <InputControl
