@@ -16,7 +16,7 @@ export default function AboutPage() {
           <h2>Amaya Alejandra she/they</h2>
           <img className={styles.devImage} src="/ama.jpg" />
           <p className={styles.devP}>Howdy! I’m a Software Engineer currently living in Portland, OR. 
-           I love to travel in search of hot springs and spicy food! At home, I spend the most time cooking and tending to my many plants.
+           I love to travel in search of hot springs and spicy food! At home, I spend the most time cooking and tending to my many plants
 
           </p> <br/> <br/> <br/>
           <span>
