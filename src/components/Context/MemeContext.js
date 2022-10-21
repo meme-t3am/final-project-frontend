@@ -7,6 +7,7 @@ export default function MemeProvider({ children }) {
   const [meme, setMeme] = useState([]);
   const [singleMeme, setSingleMeme] = useState([]);
   const [displayUrl, setDisplayUrl] = useState('');
+  const [click, setClick] = useState('');
 
   const stateAndSetters = {
     meme,
@@ -15,6 +16,8 @@ export default function MemeProvider({ children }) {
     setSingleMeme,
     displayUrl,
     setDisplayUrl,
+    click,
+    setClick,
   };
 
   return (

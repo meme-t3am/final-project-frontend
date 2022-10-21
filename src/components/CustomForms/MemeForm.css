@@ -51,8 +51,18 @@
 }
 
 .Output img {
-  width: 5em;
-  height: auto;
+  width: auto;
+  height: 150px;
+}
+
+.Output div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Output button {
+  border: 1px solid black;
 }
 
 .loaderContainer {
@@ -95,5 +105,9 @@
 }
 
 .Favorites {
+  display: flex;
+}
+
+.InputAndOutput {
   display: flex;
 }
