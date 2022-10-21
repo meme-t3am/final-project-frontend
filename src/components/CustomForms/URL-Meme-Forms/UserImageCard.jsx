@@ -6,6 +6,11 @@ export default function UserImageCard() {
 
   return (
     <div>
+      {
+        displayUrl
+        &&
+        <h3>Your image</h3>
+      }
       <img src={displayUrl}/>
     </div>
   );

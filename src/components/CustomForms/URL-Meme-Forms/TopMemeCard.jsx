@@ -11,6 +11,11 @@ export default function TopMemeCard() {
 
   return (
     <div >
+      {
+        singleMeme[1]
+        &&
+        <h3>Llegor likes this meme</h3>
+      }
       <img src={singleMeme[1]} />
       {
         singleMeme[1]

@@ -7,10 +7,10 @@ export default function OutputForm() {
   return (
     <>
       <section className={styles.Output}>
-        <TopMemeCard/>
+        <UserImageCard/>
       </section>
       <section className={styles.Output}>
-        <UserImageCard/>
+        <TopMemeCard/>
       </section>
     </>
   );
