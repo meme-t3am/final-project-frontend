@@ -10,16 +10,16 @@ import { MemeContext } from '../Context/MemeContext';
 
 export default function MemeForm() {
   const { displayUrl } = useContext(MemeContext);
-  const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
   const [apiLoader, setApiLoader] = useState(false);
 
   // // this useEffect or our initial page load
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1500);
-  }, []);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1500);
+  // }, []);
 
   // this useEffect is for our Api calls
   useEffect(() => {
