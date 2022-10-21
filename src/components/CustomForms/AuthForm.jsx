@@ -4,7 +4,7 @@
 // build actual auth form here
 import { Link, useNavigate } from 'react-router-dom';
 import { signUpUser, signInUser } from '../Services/auth';
-import styles from './AuthForm.css';
+import styles from '/src/components/App.css';
 import { FormButton, InputControl } from './FormControl';
 import { handleForm } from './HandleForm';
 

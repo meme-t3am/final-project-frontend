@@ -3,26 +3,23 @@ import '../App.css';
 import './MemeForm.css';
 import OutputForm from './URL-Meme-Forms/OutputForm';
 import InputForm from './URL-Meme-Forms/InputForm.jsx';
-import { useUser } from '../Context/UserContext';
-import { signOutUser } from '../Services/auth';
-import { useNavigate } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import OtherMemes from './URL-Meme-Forms/OtherMemes';
-import loaderImage from '/public/images/loader.png';
+import loaderImage from '/public/images/Llegor_Floating_Outline.png';
+import { MemeContext } from '../Context/MemeContext';
 
 export default function MemeForm() {
-  const { setUser } = useUser();
-  const navigate = useNavigate();
-  const [loading, setLoading] = useState(false);
+  const { displayUrl } = useContext(MemeContext);
+  const [loading] = useState(false);
   const [apiLoader, setApiLoader] = useState(false);
 
-  // this useEffect or our initial page load
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, []);
+  // // this useEffect or our initial page load
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 1500);
+  // }, []);
 
   // this useEffect is for our Api calls
   useEffect(() => {
@@ -30,13 +27,7 @@ export default function MemeForm() {
     setTimeout(() => {
       setApiLoader(false);
     }, 2000);
-  }, []);
-
-  const logout = async () => {
-    navigate('/');
-    await signOutUser();
-    setUser({});
-  };
+  }, [displayUrl]);
 
   return (
     <div className={styles.container}>
@@ -46,19 +37,19 @@ export default function MemeForm() {
         </div>
       ) : (
         <div className={styles.MemeForm}>
-          <h1>Allegori</h1>
-          <button onClick={logout}>Logout</button>
-          <InputForm />
-          {apiLoader ? (
-            <div className={styles.loaderContainer}>
-              <img src={loaderImage} />
-            </div>
-          ) : (
-            <>
-              <OutputForm />
-              <OtherMemes />
-            </>
-          )}
+          <div>
+            <InputForm />
+            {apiLoader ? (
+              <div className={styles.loaderContainer}>
+                <img src={loaderImage} />
+              </div>
+            ) : (
+              <>
+                <OutputForm />
+                <OtherMemes />
+              </>
+            )}
+          </div>
         </div>
       )}
     </div>

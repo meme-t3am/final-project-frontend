@@ -5,6 +5,7 @@ export default function Auth() {
   return (
     <>
       <Outlet/>
+
     </>
   );
 }
