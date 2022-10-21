@@ -18,7 +18,7 @@ export default function AboutPage() {
           <p className={styles.devP}>Howdy! I’m a Software Engineer currently living in Portland, OR. 
            I love to travel in search of hot springs and spicy food! At home, I spend the most time cooking and tending to my many plants.
 
-          </p> <br/> <br/>
+          </p> <br/> <br/> <br/>
           <span>
             <a
               className={styles.devLink}
@@ -70,7 +70,7 @@ export default function AboutPage() {
           <img className={styles.devImage} src="/dav.png" />
           <p className={styles.devP}>Hi, I am David. I am a software developer from Estacada, OR. 
           I love to play disc golf and watch movies with my wife and two cats. My favorite memes are Star Wars prequel memes.
-          </p> <br /> <br/>
+          </p> <br /> <br/> <br/>
           <span>
             <a
               className={styles.devLink}

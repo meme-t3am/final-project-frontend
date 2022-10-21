@@ -5,7 +5,7 @@ import OutputForm from './URL-Meme-Forms/OutputForm';
 import InputForm from './URL-Meme-Forms/InputForm.jsx';
 import { useContext, useEffect, useState } from 'react';
 import OtherMemes from './URL-Meme-Forms/OtherMemes';
-import loaderImage from '/public/images/loader.png';
+import loaderImage from '/public/images/Llegor_Floating_Outline.png';
 import { MemeContext } from '../Context/MemeContext';
 
 export default function MemeForm() {

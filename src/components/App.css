@@ -66,3 +66,22 @@ button {
   color: var(--color1);
   background-color: var(--color2);
 }
+
+p {
+  font-family: 'Montserrat';
+}
+
+h2 {
+  font-family: 'Montserrat';
+  color: var(--color1);
+}
+
+a {
+  font-family: 'Montserrat';
+}
+
+.AuthForm {
+  font-family: 'Montserrat';
+  color: var(--color1);
+  gap: 1em;
+}
