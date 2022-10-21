@@ -46,19 +46,21 @@ export default function MemeForm() {
         </div>
       ) : (
         <div className={styles.MemeForm}>
-          <h1>Allegori</h1>
-          <button onClick={logout}>Logout</button>
-          <InputForm />
-          {apiLoader ? (
-            <div className={styles.loaderContainer}>
-              <img src={loaderImage} />
-            </div>
-          ) : (
-            <>
-              <OutputForm />
-              <OtherMemes />
-            </>
-          )}
+          <div>
+            <h1>Allegori</h1>
+            <button onClick={logout}>Logout</button>
+            <InputForm />
+            {apiLoader ? (
+              <div className={styles.loaderContainer}>
+                <img src={loaderImage} />
+              </div>
+            ) : (
+              <>
+                <OutputForm />
+                <OtherMemes />
+              </>
+            )}
+          </div>
         </div>
       )}
     </div>
