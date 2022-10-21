@@ -1,4 +1,8 @@
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import { 
+  Route,
+  BrowserRouter as Router,
+  Routes, 
+} from 'react-router-dom';
 import ProtectedRoute from './Auth/ProtectedRoute';
 import UserProvider from './Context/UserContext';
 import Auth from './CustomForms/Auth';
@@ -7,6 +11,7 @@ import MemeForm from './CustomForms/MemeForm';
 import './App.css';
 import MemeProvider from './Context/MemeContext';
 import Layout from './CustomForms/Header/Layout';
+import About from './CustomForms/About';
 
 export default function App() {
   return (
@@ -17,6 +22,7 @@ export default function App() {
             <Route path="/" element={<Auth />}>
               <Route index element={<AuthForm mode="signin" />} />
               <Route path="signup" element={<AuthForm mode="signup" />} />
+              <Route path="about" element={<About/>}/>
             </Route>
 
             <Route element={<ProtectedRoute />}>
