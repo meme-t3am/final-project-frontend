@@ -2,10 +2,15 @@ import { FormButton, InputControl } from '../FormControl';
 import styles from '../MemeForm.css';
 import { MemeContext } from '../../Context/MemeContext';
 import { memeResponseArrayOfArrays } from '../../Services/meme';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 export default function InputForm() {
-  const { setMeme, setSingleMeme, setDisplayUrl } = useContext(MemeContext);
+  const { 
+    setMeme, 
+    setSingleMeme, 
+    setDisplayUrl, 
+    setClick
+  } = useContext(MemeContext);
   const [url, setUrl] = useState('');
 
   const handleChange = (e) => {
@@ -22,6 +27,10 @@ export default function InputForm() {
     setMeme(memes);
     setDisplayUrl(url);
   };
+  
+  useEffect(() => {
+    setClick(null);
+  }, handleUrlSubmit());
 
   return (
     <div className={styles.Input}>
